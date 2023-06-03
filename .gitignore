@@ -1,0 +1,12 @@
+.idea
+*.pth
+*.jpg
+*.png
+*.tar.gz
+data_set
+dataset
+runs
+venv
+save_weights
+VOCdevkit
+
