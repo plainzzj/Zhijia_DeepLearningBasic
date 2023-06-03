@@ -23,7 +23,7 @@ def main():
     # 载入权重文件
     net.load_state_dict(torch.load('Lenet.pth'))
     # 载入图像
-    im = Image.open('test3.jpg')
+    im = Image.open('img.png')
     # 预处理
     # 得到一个channel 高度 宽度
     im = transform(im)  # [C, H, W]
@@ -42,6 +42,11 @@ def main():
         predict = torch.softmax(outputs, dim=1)
     # print(classes[int(predict)])
     print(predict)
+    """
+    百分之30.24的概率为车！
+    tensor([[1.1386e-01, 3.0241e-01, 3.0353e-04, 5.2212e-05, 5.6646e-06, 3.1565e-06,
+         1.7657e-04, 3.6351e-07, 5.3815e-01, 4.5044e-02]])
+    """
 
 
 if __name__ == '__main__':
